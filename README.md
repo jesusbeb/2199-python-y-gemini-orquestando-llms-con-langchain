@@ -43,6 +43,18 @@ Después, instala los paquetes utilizando (se debe estar dentro del mismo direct
 pip install -r requirements.txt
 ```
 
+
+Si se tiene problemas por estar usando librerias desactualizadas, ejecutamos los siguientes comandos, teniendo activo el ambiente virtual:
+
+python.exe -m pip install --upgrade pip   --> Actualiza el instalador de python
+pip install -U langchain langchain-community langchain-cohere langchain-text-splitters langsmith   --> Actualiza los paquetes de LangChain
+
+
+Despues de esto, es necesario cambiar la variable en my_models.py para asegurar que use la version mas reciente y estable:
+
+GEMINI_FLASH = "gemini-flash-latest"
+
+
 ## 🔑 Generar API\_KEYs y asociarlas al archivo .env
 
 ```python
